@@ -2,7 +2,7 @@
 %define	name	perl-%{module}
 %define	module	IO-Stty
 %define	version	02
-%define	release	7mdk
+%define	release	%mkrel 8
 
 Summary:	IO-Stty perl module
 Name: 		%{name}
@@ -30,6 +30,8 @@ IO-Stty is a module for setting terminal parameters.
 
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 make
+
+%check
 make test
 
 %install
