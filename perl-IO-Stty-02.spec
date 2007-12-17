@@ -13,7 +13,6 @@ Group: 		Development/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/IO/%{module}-.%{version}.tar.bz2
 Url:		http://www.cpan.org
 Buildrequires:	perl-devel
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Patch0:		%{name}-paths.patch
 Requires: 	perl, perl-base >= 5.8.6
 Buildarch:	noarch
