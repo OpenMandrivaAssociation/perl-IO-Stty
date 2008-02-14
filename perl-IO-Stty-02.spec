@@ -10,6 +10,7 @@ Version: 	%{version}
 Release:	%{release} 
 License: 	GPL
 Group: 		Development/Perl
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/IO/%{module}-.%{version}.tar.bz2
 Url:		http://www.cpan.org
 Buildrequires:	perl-devel
