@@ -2,7 +2,7 @@
 %define	name	perl-%{module}
 %define	module	IO-Stty
 %define	version	02
-%define	release	%mkrel 8
+%define	release	%mkrel 9
 
 Summary:	IO-Stty perl module
 Name: 		%{name}
