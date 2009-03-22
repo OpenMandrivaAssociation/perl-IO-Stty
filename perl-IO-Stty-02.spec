@@ -24,7 +24,7 @@ IO-Stty is a module for setting terminal parameters.
 %prep
 %setup -q -n %{module}-.%{version}
 
-%patch -p1
+%patch0 -p1
 
 %build
 
