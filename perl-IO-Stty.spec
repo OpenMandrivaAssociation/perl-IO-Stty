@@ -1,38 +1,33 @@
-%define	module	IO-Stty
-%define	name	perl-%{module}
-%define	module	IO-Stty
-%define	version	02
-%define	release	%mkrel 11
+%define	upstream_name	 IO-Stty
+%define	upstream_version .02
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	IO-Stty perl module
-Name: 		%{name}
-Version: 	%{version}
-Release:	%{release} 
 License: 	GPL
 Group: 		Development/Perl
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/IO/%{module}-.%{version}.tar.bz2
 Url:		http://www.cpan.org
-Buildrequires:	perl-devel
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:		%{name}-paths.patch
-Requires: 	perl, perl-base >= 5.8.6
+
 Buildarch:	noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IO-Stty is a module for setting terminal parameters.
 
 %prep
-%setup -q -n %{module}-.%{version}
-
+%setup -q -n %{upstream_name}-%{upstream_version}
 %patch0 -p1
 
 %build
-
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-make
+%make
 
 %check
-make test
+%make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -45,5 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README stty.txt
 %{perl_vendorlib}/IO/*
-
-
