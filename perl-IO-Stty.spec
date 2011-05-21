@@ -11,8 +11,9 @@ License: 	GPL
 Group: 		Development/Perl
 Url:		http://www.cpan.org
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
-
 Buildarch:	noarch
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Module::Build) => 0.35
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
