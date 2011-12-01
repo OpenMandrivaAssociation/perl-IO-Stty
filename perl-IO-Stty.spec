@@ -34,7 +34,7 @@ IO-Stty is a module for setting terminal parameters.
 ./Build install destdir=%{buildroot}
 
 %clean 
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
