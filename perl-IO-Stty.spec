@@ -5,7 +5,7 @@ Summary:	IO-Stty perl module
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	12
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://www.cpan.org
