@@ -18,10 +18,10 @@ BuildRequires:	perl(Module::Build) => 0.35
 IO-Stty is a module for setting terminal parameters.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Build.PL installdirs=vendor
+perl Build.PL installdirs=vendor
 ./Build
 
 %check
@@ -34,5 +34,5 @@ IO-Stty is a module for setting terminal parameters.
 %doc README
 %{_bindir}/stty.pl
 %{perl_vendorlib}/IO/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
