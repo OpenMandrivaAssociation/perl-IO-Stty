@@ -1,15 +1,15 @@
 %define	modname	IO-Stty
-%define	modver	0.03
+%define	modver	0.08
 
 Summary:	IO-Stty perl module
 Name:		perl-%{modname}
 Epoch:		1
-Version:	%perl_convert_version %{modver}
-Release:	19
+Version:	%{modver}
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
-Url:		https://www.cpan.org
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/IO/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/cpan-authors/IO-Stty
+Source0:	https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-Stty-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Module::Build) => 0.35
