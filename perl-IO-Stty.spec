@@ -5,7 +5,7 @@ Summary:	IO-Stty perl module
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%{modver}
-Release:	4
+Release:	5
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://github.com/cpan-authors/IO-Stty
@@ -30,7 +30,7 @@ make test
 %make_install
 
 %files
-%doc README
+%doc README.md
 %{perl_vendorlib}/IO/*
 %doc %{_mandir}/man3/*
 
