@@ -5,7 +5,7 @@ Summary:	IO-Stty perl module
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%{modver}
-Release:	1
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://github.com/cpan-authors/IO-Stty
@@ -21,14 +21,13 @@ IO-Stty is a module for setting terminal parameters.
 %autosetup -p1 -n %{modname}-%{modver}
 
 %build
-perl Build.PL installdirs=vendor
-./Build
-
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 %check
-./Build test
+make test
 
 %install
-./Build install destdir=%{buildroot}
+%make_install
 
 %files
 %doc README
